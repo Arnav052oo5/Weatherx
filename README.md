@@ -6,7 +6,8 @@ A sleek, real-time weather app built with **React Native** and the **OpenWeather
 
 ## 📱 Screenshots
 
-> _Add your screenshots here_
+
+
 
 ---
 
