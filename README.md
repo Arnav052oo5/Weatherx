@@ -1,50 +1,109 @@
-# Welcome to your Expo app 👋
+# 🌤️ WeatherMap — React Native Weather App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A sleek, real-time weather app built with **React Native** and the **OpenWeatherMap API**. Search any city or tap anywhere on the interactive map to instantly get live weather data — temperature, humidity, wind, pressure, and more.
 
-## Get started
+---
 
-1. Install dependencies
+## 📱 Screenshots
 
-   ```bash
-   npm install
-   ```
+> _Add your screenshots here_
 
-2. Start the app
+---
 
-   ```bash
-   npx expo start
-   ```
+## ✨ Features
 
-In the output, you'll find options to open the app in a
+- 🔍 **City Search** — Search weather for any city in the world
+- 🗺️ **Interactive Map** — Tap anywhere on the map to fetch weather at that location
+- 🌫️ **Fog Animation** — Animated overlay triggers automatically for cloudy, misty, or hazy conditions
+- 📍 **Live Marker** — Map marker updates in real time to the searched or tapped location
+- 🌡️ **Weather Stats** — Temperature, description, humidity, wind speed, pressure, and rainfall
+- 📐 **Coordinates Display** — Shows precise lat/lon of the selected location
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+---
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## 🛠️ Tech Stack
 
-## Get a fresh project
+| Layer | Technology |
+|---|---|
+| Framework | React Native (Expo) |
+| Language | TypeScript |
+| Maps | `react-native-maps` |
+| HTTP Client | `axios` |
+| Weather Data | OpenWeatherMap API |
+| Animation | React Native `Animated` API |
 
-When you're ready, run:
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js ≥ 18
+- Expo CLI (`npm install -g expo-cli`)
+- An [OpenWeatherMap API key](https://openweathermap.org/api) (free tier works)
+
+### Installation
 
 ```bash
-npm run reset-project
+# Clone the repo
+git clone https://github.com/your-username/weathermap.git
+cd weathermap
+
+# Install dependencies
+npm install
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### Add your API Key
 
-## Learn more
+Open `HomeScreen.tsx` and replace the API key:
 
-To learn more about developing your project with Expo, look at the following resources:
+```ts
+const API_KEY = "your_openweathermap_api_key_here";
+```
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+### Run the App
 
-## Join the community
+```bash
+npx expo start
+```
 
-Join our community of developers creating universal apps.
+Scan the QR code with **Expo Go** on your phone, or press `a` for Android emulator / `i` for iOS simulator.
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+---
+
+## 📂 Project Structure
+
+```
+weathermap/
+├── app/
+│   └── HomeScreen.tsx      # Main screen — all logic and UI
+├── assets/                 # Icons and images
+├── app.json                # Expo config
+└── package.json
+```
+
+---
+
+## 🔑 API Reference
+
+This app uses the [OpenWeatherMap Current Weather API](https://openweathermap.org/current):
+
+```
+GET https://api.openweathermap.org/data/2.5/weather
+  ?q={city}&appid={API_KEY}&units=metric          # by city name
+  ?lat={lat}&lon={lon}&appid={API_KEY}&units=metric # by coordinates
+```
+
+---
+
+## 🙋‍♂️ Author
+
+**Arnav Jena**
+B.Tech CSE — KIIT, Bhubaneswar
+[LinkedIn](https://linkedin.com/in/your-profile) · [GitHub](https://github.com/your-username)
+
+---
+
+## 📄 License
+
+This project is licensed under the [MIT License](LICENSE).
